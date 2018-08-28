@@ -1,7 +1,7 @@
 
 // Declare Variable: Computer Choice Array
 
-var wordBank = ["tripod", "aperture", "long-exposure", "astrophotography", "infrared", "depth-of-field", "landscape", "skyline", "photoshop", "lazy-shutter", "cityscape", "macro-image", "iso-sensitivity", "portrait-photographer", "fashion-shoot", "telephoto-lens", "wide-angle-lens"];
+var wordBank = ["tripod", "camera", "telephoto-lens", "photography", "portrait", "family-pictures", "astro-photography", "fine-art", "stock-image", "wide-angle", "long-exposure", "street-photography", "candid-portrait", "aperture", "photoshopped", "post-processing", "on-location", "light-box", "studio", "off-camera-flash", "action-camera", "underwater-camera", "point-n-shoot", "film-camera", "digital-camera", "canvas-prints", "one-hour-photo", "polaroid-photo", "dark-room", "negative", "bokeh", "soft-focus", "gaussian-blur", "clone-stamp", "touch-up"];
 
 // Declare Variable: Guesses Letter Array
 
@@ -14,6 +14,10 @@ var guessedRight = [];
 // Declare Variable: keycodes for each letter of the current word.
 
 var letterKeys = [];
+
+// Declare Variable: array to store and display guessed words
+
+var guessedWords = [];
 
 // Declare Variables: Game Tallies
 
@@ -29,6 +33,7 @@ var wTally = document.getElementById("winsTally");
 var gLeft = document.getElementById("guessesLeft");
 var hWord = document.getElementById("hangWord");
 var inst = document.getElementById("instructions");
+var gWord = document.getElementById("guessed-word-bucket");
 
 // Declare Variable: The Computer's Word Choice
 
@@ -60,8 +65,9 @@ function gameRefresh() {
     curWord = wordBank[Math.floor(Math.random() * wordBank.length)],
     guessedRight = [],
     letterKeys = [],
-    guessedLetters = [];
-    letterStart();
+    guessedLetters = [],
+    letterStart(),
+    console.log(curWord);
 };
 
 // This is the User's Guess
@@ -110,6 +116,7 @@ document.onkeyup = function(event) {
     if ( guessedRight.includes(" _ ") == false ) {
         Win++,
         Guesses = 12,
+        guessedWords.push(curWord),
         gameRefresh();
     }
 
@@ -117,12 +124,14 @@ document.onkeyup = function(event) {
 
     var guessR = guessedLetters.toString().toUpperCase();
     var hang = guessedRight.join(" ").toUpperCase();
+    var gW = guessedWords.join(", ").toUpperCase();
 
     // This is the display of the results
     hWord.innerText = "Guess this word: " + hang;
     uGuess.innerText = "Your Guesses So Far: " + guessR;
     wTally.textContent = "Wins: " + Win;
     gLeft.textContent = "Guesses Left: " + Guesses;
+    gWord.innerText = "Correctly Guessed Words: " + gW;
 
 
     // console.log("this is a text log");
