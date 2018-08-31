@@ -1,0 +1,94 @@
+/* tag wide styling */
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: -500px;
+    background-image: url("../images/connectwork.png");
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: -10px;
+}
+
+/* class styling */
+
+.container {
+    background-image: url("../images/circles-light.png");
+    margin-top: 50px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-image: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 0px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+}
+
+.hangman {
+    margin-bottom: 50px;
+}
+
+/* id styling */
+
+#boxLeft {
+    border-style: groove;
+    border: 5px;
+    border-radius: 10px;
+    margin: 2%;
+    box-shadow: 20px 20px 50%;
+}
+
+#boxRight {
+    border-style: groove;
+    border: 5px;
+    border-radius: 10px;
+    margin: 2%;
+    box-shadow: 20px 20px 50%;
+}
+
+#wordImage {
+    margin: auto;
+    padding: 10px;
+}
+
+#hint {
+    width: 100%;
+    height: auto;
+    margin: 10% auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50%;
+}
+
+#hintBackground {
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    top: 0px;
+    z-index: -1;
+    -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
+    filter: blur(8px);
+}
+
+/* media styling */
+
+@media screen and (max-width: 1000px) {
+    #hintBackground {
+        height: 200%;
+    }
+}
+
