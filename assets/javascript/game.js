@@ -79,7 +79,8 @@ var uGuess = document.getElementById("userGuess"),
     inst = document.getElementById("instructions"),
     gWord = document.getElementById("guessed-word-bucket"),
     wImage = document.getElementById("wordImage"),
-    bImage = document.getElementById("background");
+    bImage = document.getElementById("background"),
+    hText = document.getElementById("hintText");
 
 // Object: The Computer's Word Choice
 
@@ -131,9 +132,10 @@ function gameRefresh() {
 document.onkeyup = function(event) {
     var usGuess = event.key;
 
-    //Start with hiding the instructions
+    //Start with hiding the instructions and showing "hint:"
 
     inst = document.getElementById("instructions").style.visibility = "hidden";
+    hText.innerHTML = "<p id=\"hintW\"> hint: </p>";
 
     // Event Object: Grab the Keycode for the user Guess
 
@@ -178,14 +180,6 @@ document.onkeyup = function(event) {
         gameRefresh();
     }
 
-    // Logic: Run the colorSwitcher comparison to make sure the header is readable. This changes the styling of the header when certain images are displayed in the background.
-
-    if ( ( curWord === "candid-portrait") || (curWord === "clone-stamp") || (curWord === "negative") || (curWord === "point-n-shoot") || (curWord === "telephoto-lens") || (curWord === "one-hour-photo") || (curWord === "polaroid-photo") ) {
-        document.getElementById("colorSwitcher").style.color = "black";
-        document.getElementById("colorSwitcher").style.backgroundImage = "url(\"../word-guess-game/assets/images/circles-light.png\")";
-        document.getElementById("colorSwitcher").style.borderRadius = "10px";
-        document.getElementById("colorSwitcher").style.borderStyle = "outset 10px";
-    };
 
     // Objects: More Variable References to connect outcomes of the game back to the index page
 

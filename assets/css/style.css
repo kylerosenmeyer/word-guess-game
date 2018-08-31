@@ -5,9 +5,9 @@ h1 {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    bottom: -500px;
+    bottom: 0px;
     background-image: url("../images/connectwork.png");
     padding: 20px;
     font-size: 10px;
@@ -20,7 +20,7 @@ footer {
 
 .container {
     background-image: url("../images/circles-light.png");
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
 }
@@ -66,22 +66,31 @@ footer {
 #hint {
     width: 100%;
     height: auto;
-    margin: 10% auto;
+    margin: 1% auto 10%;
     padding: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 50%;
+    filter: drop-shadow(10px 10px);
+    filter: saturate(120%);
 }
 
 #hintBackground {
     width: 100%;
     position: absolute;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     top: 0px;
     z-index: -1;
     -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
     filter: blur(8px);
+    filter: brightness(60%);
+}
+
+#hintW {
+    text-align: center;
+    border: none;
+    padding: 5px;
+    font-style: italic; 
+    margin-bottom: -20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* media styling */
