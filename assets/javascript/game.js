@@ -164,13 +164,6 @@ document.onkeyup = function(event) {
 
     };
 
-    // Logic: If the user runs out of guesses, refresh the game
-    
-    if ( Guesses === 0 ) {
-        Guesses = 12, 
-        gameRefresh();
-    };
-
     // Logic: If the user guesses the word correctly, refresh the game
 
     if ( guessedRight.includes(" _ ") == false ) {
@@ -179,6 +172,15 @@ document.onkeyup = function(event) {
         guessedWords.push(curWord),
         gameRefresh();
     }
+    
+    // Logic: If the user runs out of guesses, refresh the game
+    
+    if ( Guesses === 0 ) {
+        Guesses = 12, 
+        gameRefresh();
+    };
+
+    
 
 
     // Objects: More Variable References to connect outcomes of the game back to the index page

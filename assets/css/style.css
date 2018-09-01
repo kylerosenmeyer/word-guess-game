@@ -68,8 +68,7 @@ footer {
     height: auto;
     margin: 1% auto 10%;
     padding: 10px;
-    filter: drop-shadow(10px 10px);
-    filter: saturate(120%);
+    filter: drop-shadow(10px 10px 50px) saturate(120%);
 }
 
 #hintBackground {
@@ -79,9 +78,7 @@ footer {
     background-size: auto;
     top: 0px;
     z-index: -1;
-    -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
-    filter: blur(8px);
-    filter: brightness(60%);
+    filter: blur(15px) brightness(60%);
 }
 
 #hintW {
