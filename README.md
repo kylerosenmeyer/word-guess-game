@@ -8,7 +8,7 @@ This game is useful to learn the principals of javascript *arrays, functions, st
 loops*. It is also useful to begin learning about the power of objects.
 
 This project is not available for additional contribution from the github community, however
-Kyle Rosenmeyer may be contacted at kylerosenmeyer@gmail.com for help or questions
+Kyle Rosenmeyer may be contacted through his website for help or questions
 regarding the project.
 
 More information:
@@ -16,3 +16,5 @@ More information:
 See the [Live Project Here.](https://kylerosenmeyer.github.io/word-guess-game/)
 
 See [Under the Hood Here.](https://github.com/kylerosenmeyer/word-guess-game/)
+
+See **Kyle Rosenmeyer's** [website and entire portfolio here.](https://kylerosenmeyer.github.io/hw2-bootstrap-portfolio/)
